@@ -56,6 +56,7 @@ html_copy_source = False
 html_show_sourcelink = False
 
 from inspect import getsourcefile
+import os
 
 # Get path to directory containing this file, conf.py.
 DOCS_DIRECTORY = os.path.dirname(os.path.abspath(getsourcefile(lambda: 0)))

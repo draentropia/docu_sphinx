@@ -8,6 +8,7 @@ dependencies = [
     "furo>=2024.8.6",
     "nbsphinx>=0.9.6",
     "pandoc>=2.4",
+    "pypandoc>=1.15",
     "sphinx>=8.2.3",
     "sphinx-automodapi>=0.20.0",
     "sphinx-design>=0.6.1",
