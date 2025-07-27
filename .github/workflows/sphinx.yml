@@ -26,6 +26,9 @@ jobs:
           cache-dependency-glob: "pyproject.toml"
           python-version: "3.12"
 
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
       - name: Install the requierements
         run: uv sync --all-groups --all-extras  
 
