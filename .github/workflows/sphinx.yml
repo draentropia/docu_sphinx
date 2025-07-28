@@ -47,4 +47,4 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           ghp-import -n -f docs/_build/html
-          git push -f https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} gh-pages
+          git push -f https://draentropia:${GH_TOKEN}@github.com/${{ github.repository }} gh-pages
