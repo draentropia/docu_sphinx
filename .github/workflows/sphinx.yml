@@ -39,6 +39,12 @@ jobs:
         run: | 
           cd docs/
           make html
-      - name: Run ghp-import
-        run: | 
-          ghp-import -n -p -f docs/_build/html
+
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          ghp-import -n -f docs/_build/html
+          git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} gh-pages
