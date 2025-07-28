@@ -32,6 +32,9 @@ jobs:
       - name: Install the requierements
         run: uv sync --all-groups --all-extras  
 
+      - name: Install ghp-import
+        run: uv pip install ghp-import
+
       - name: Build HTML
         run: | 
           cd docs/
